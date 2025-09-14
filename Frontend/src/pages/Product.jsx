@@ -7,7 +7,7 @@ import RelatedProducts from '../components/RelatedProducts';
 const Product = () => {
 
   const {productId} = useParams();
-  const {products, currency} = useContext(ShopContext);
+  const {products, currency, addToCart} = useContext(ShopContext);
   const [productData, setProductData] = useState(false);
   const [image, setImage] = useState('');
   const [size, setSize]  = useState('');
@@ -63,7 +63,7 @@ const Product = () => {
                   <div className=' flex gap-2'>
                    {productData.sizes.map((item, index)=>(
                      <button 
-                       onClick={()=>setSize(item)} 
+                       onClick={()=>setSize(prev => prev === item ? '' : item)} 
                        className={`border py-2 px-5 rounded-md text-sm font-medium transition-colors ${item === size ? 'border-orange-500 bg-orange-100 text-orange-600' : 'bg-gray-100 hover:bg-gray-200'}`} 
                        key={index}
                      >
@@ -72,7 +72,7 @@ const Product = () => {
                    ))}
                   </div>
                 </div>
-                 <button className='bg-black text-white px-10 py-3 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors active:scale-95'>ADD TO CART</button>
+                 <button onClick={()=>addToCart(productData._id,size)} className='bg-black text-white px-10 py-3 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors active:scale-95'>ADD TO CART</button>
                  <hr  className='mt-6 sm:w-4/5' />
                  <div className='text-sm text-gray-500 mt-5 flex flex-col gap-1'>
                      <p>100% Original product.</p>
