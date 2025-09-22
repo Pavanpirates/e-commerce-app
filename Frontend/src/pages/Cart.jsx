@@ -63,7 +63,7 @@ useEffect(() => {
            <div className='w-full sm:w-[450px]'>
             <CartTotal />
             <div className="w-full text-end">
-  <button   onClick={()=> navigate('/Place-Order ')}
+  <button   onClick={()=> navigate('/place-order')}
     className="bg-black text-white text-sm my-8 px-8 py-3 rounded-lg shadow-md
                hover:bg-gray-800 hover:shadow-lg transition-colors duration-300"
   >
