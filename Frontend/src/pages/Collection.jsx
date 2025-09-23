@@ -131,13 +131,14 @@ const Collection = () => {
 
           {/* Product sort */}
           <select
-            className='border-2 border-gray-300 text-sm px-2 py-1 rounded hover:border-gray-400 transition-colors'
-            onChange={(e) => setSortType(e.target.value)}
-          >
-            <option value="relevant">Sort by: Relevant</option>
-            <option value="low-high">Sort by: Low to High</option>
-            <option value="high-low">Sort by: High to Low</option>
-          </select>
+  className="border border-black/40 text-sm px-2 py-1 rounded-md bg-white shadow-sm focus:outline-none focus:ring-1 focus:ring-gray-300 focus:border-black/60 hover:border-black/60 transition-all duration-200"
+  onChange={(e) => setSortType(e.target.value)}
+>
+  <option value="relevant">Sort by: Relevant</option>
+  <option value="low-high">Sort by: Low to High</option>
+  <option value="high-low">Sort by: High to Low</option>
+</select>
+
         </div>
 
         {/* Map Product */}
