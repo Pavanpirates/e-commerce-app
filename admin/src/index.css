@@ -30,7 +30,14 @@ a.active hr {
    }
 }
 
+select, input, textarea{
+   border: 1px solid #c2c2c2;
+   outline-color:  #4c4a4a4c;
+   border-radius: 4px;
+}
+
 .active {
   background-color: #E0E0E0; 
   border-color: #C0C0C0; 
 }
+
