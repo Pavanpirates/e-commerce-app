@@ -32,7 +32,7 @@ import productModel from "../models/productModel.js"
                         subCategory,
                         bestseller: bestseller === "true" ? true : false,
                         sizes: JSON.parse(sizes),
-                        images: imagesUrl,
+                         images: imagesUrl,
                         date: Date.now()
                      }
                       console.log(productData);

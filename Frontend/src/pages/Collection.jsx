@@ -63,7 +63,7 @@ const Collection = () => {
   useEffect(() => {
     applyFilter();
   }, [category, subCategory, sortType, search, showSearch, products]);
-
+  console.log("filter",filterProducts);
   return (
     <div className='flex flex-col sm:flex-row gap-6 pt-10 border-t'>
 
@@ -147,7 +147,7 @@ const Collection = () => {
             <ProductItem
               key={index}
               id={item._id}
-              image={item.image}
+              image={item.images}
               name={item.name}
               price={item.price}
             />

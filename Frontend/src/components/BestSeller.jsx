@@ -30,7 +30,7 @@ const BestSeller = () => {
                     <ProductItem 
                         key={index} 
                         id={item._id} 
-                        image={item.image} 
+                        image={item.images} 
                         name={item.name} 
                         price={item.price} 
                     />
