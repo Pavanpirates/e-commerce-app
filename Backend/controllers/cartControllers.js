@@ -45,7 +45,7 @@ const  updateCart = async (req,res)=>{
    const {userId, itemId, size, quantity} = req.body
 
    const userData = await userModel.findById(userId)
-     let cartData = userData.cartData || {};
+     let cartData = userData.cartData;
 
      cartData[itemId][size]= quantity
 
@@ -64,7 +64,7 @@ const  updateCart = async (req,res)=>{
 
 // get user cart data
 
-const  getuserCart = async (req,res)=>{
+const  getUserCart = async (req,res)=>{
  try {
 
     const {userId} =req.body
@@ -80,4 +80,4 @@ const  getuserCart = async (req,res)=>{
 }
 
 
-export {addToCart, updateCart, getuserCart}
+export {addToCart, updateCart, getUserCart}
