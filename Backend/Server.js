@@ -23,9 +23,8 @@ app.use("/api/product", productRouter);
 app.use("/api/cart", cartRouter);
 
 app.get("/", (req, res) => {
-  res.send("API working ✅ on Vercel");
+  res.send("API working");
 });
 
-// ❌ Remove app.listen()
-// ✅ Instead export the app
+
 export default app;
