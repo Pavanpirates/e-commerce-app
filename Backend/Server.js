@@ -9,14 +9,13 @@ import cartRouter from "./routes/cartRoute.js";
 
 // App config
 const app = express();
-const port = process.env.PORT || 4000;
 
 connectDB();
 connectCloudinary();
 
 // Middlewares
 app.use(cors());
-app.use(express.json());  // Removed duplicate express.json()
+app.use(express.json());
 
 // API endpoints
 app.use("/api/user", userRouter);
@@ -24,7 +23,9 @@ app.use("/api/product", productRouter);
 app.use("/api/cart", cartRouter);
 
 app.get("/", (req, res) => {
-  res.send("API working");
+  res.send("API working ✅ on Vercel");
 });
 
-app.listen(port, () => console.log(`Server is running on port : ${port}`));
+// ❌ Remove app.listen()
+// ✅ Instead export the app
+export default app;
